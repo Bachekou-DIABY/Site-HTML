@@ -1,0 +1,105 @@
+@import url('https://fonts.googleapis.com/css2?family=Amatic+SC&family=Cormorant+Garamond:wght@500&family=Homemade+Apple&display=swap');
+
+:root {
+  --text-font-size: 1em;
+
+  --main-bg-color: #efefef;
+  --title-font: 'Cormorant garamont medium', serif;
+  --title-color: #073e4d;
+
+  --secondary-bg-color: #466966;
+  --white-color-font: #efefef;
+
+  --tarif-color: #688282;
+
+
+
+
+  --main-font: 'Amatic SC', cursive;
+  
+
+  --subtitle-font:'Homemade Apple',cursive;
+
+}
+
+a,
+a:hover,
+a:visited {
+    color:var(--secondary-bg-color);
+    text-decoration: none;
+}
+
+.title {
+  color: var(--title-color);
+  font-family: var(--title-font);
+  display: block;
+}
+
+.title > h1 {
+  font-size: 2em;
+}
+
+h3{
+  font-family:var(--title-font) ;
+  color:var(--tarif-color);
+  margin-bottom: 10px;
+  display:block;
+}
+
+.subtitle{
+  font-family: var(--subtitle-font);
+}
+
+header > .navbar > nav .active {
+  background-color: var(--third-bg-color);
+  text-decoration: underline;
+  color: var(--white-color-font);
+
+}
+
+
+nav{
+  background-color: var(--secondary-bg-color);
+}
+
+.navbar-toggler {
+  margin-left: auto;
+}
+
+
+@media screen and (min-width: 720px){
+  .title > h1 {
+    font-size: 3em;
+  }
+}
+
+main{
+  height: 120vh;
+}
+
+footer{
+  height: 50px;
+  background-color: var(--third-bg-color);
+}
+
+.price{
+  background-color: var(--tarif-color);
+  height: 200px;
+  color:var(--white-color-font);
+  font-family: var(--main-font);
+  font-size: 20px;
+}
+
+.price > h4 {
+font-size: 30px;
+text-decoration: underline;
+}
+
+.aside{
+  border-right: 1px solid;
+  border-left: 1px solid;
+}
+
+.formule3{
+  display: block;
+}
