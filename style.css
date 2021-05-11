@@ -1,5 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Amatic+SC&family=Cormorant+Garamond:wght@500&family=Homemade+Apple&display=swap');
-
+/** Global style **/
 :root {
   --text-font-size: 1em;
 
@@ -12,14 +12,14 @@
 
   --tarif-color: #688282;
 
-
-
-
   --main-font: 'Amatic SC', cursive;
-  
 
   --subtitle-font:'Homemade Apple',cursive;
 
+}
+
+body{
+  overflow-x: hidden;
 }
 
 a,
@@ -35,20 +35,54 @@ a:visited {
   display: block;
 }
 
-.title > h1 {
-  font-size: 2em;
-}
-
 h3{
+  font-size: 1em;
   font-family:var(--title-font) ;
   color:var(--tarif-color);
   margin-bottom: 10px;
   display:block;
 }
 
+h6{
+  color:var(--title-color);
+  font-size:0.8em;
+}
+
 .subtitle{
   font-family: var(--subtitle-font);
 }
+
+.formule{
+  height:300px;
+}
+
+.position{
+  justify-content: center;
+  text-align:center;
+  align-items: center;
+}
+
+.price{
+  background-color: var(--tarif-color);
+  height: 300px;
+  color:var(--white-color-font);
+  font-family: var(--main-font);
+  font-size: 20px;
+}
+.m-0{
+  margin: 0px;
+}
+
+.p-0{
+  padding:0;
+}
+
+.price > h4 {
+font-size: 30px;
+text-decoration: underline;
+}
+
+/** Header style**/
 
 header > .navbar > nav .active {
   background-color: var(--third-bg-color);
@@ -57,6 +91,10 @@ header > .navbar > nav .active {
 
 }
 
+header >.title > h1, p {
+  font-size: 1em;
+}
+/** Navbar style **/
 
 nav{
   background-color: var(--secondary-bg-color);
@@ -66,40 +104,85 @@ nav{
   margin-left: auto;
 }
 
-
-@media screen and (min-width: 720px){
-  .title > h1 {
-    font-size: 3em;
-  }
-}
-
+/** Main style **/
 main{
-  height: 120vh;
+  display: block;
+  height: 1105px;
 }
 
-footer{
-  height: 50px;
-  background-color: var(--third-bg-color);
-}
-
-.price{
-  background-color: var(--tarif-color);
-  height: 200px;
-  color:var(--white-color-font);
-  font-family: var(--main-font);
-  font-size: 20px;
-}
-
-.price > h4 {
-font-size: 30px;
-text-decoration: underline;
+.description{
+  font-size:1em;
 }
 
 .aside{
-  border-right: 1px solid;
-  border-left: 1px solid;
+  border: 1px solid;
+  writing-mode: vertical-rl;
+  font-family: var(--main-font);
+  color: var(--title-color);
+  font-size: 20px;
+  font-weight: bold;
+  word-spacing: 4px; 
 }
 
-.formule3{
+/** Footer style **/
+
+footer{
+  display:block;
+  height: 50px;
+  background-color: var(--secondary-bg-color);
+  color:var(--main-bg-color);
+  padding-top: 10px;
+}
+
+/** Media queries **/
+@media screen and (min-width: 768px){
+  header> .title > h1, 
+  header > .title > p ,
+  h3,
+  main > h1,
+  main > p {
+    font-size: 2em;
+  }
+  h6 ,
+  main > .description{
+    font-size:1.5em;
+  }
+  .aside{
+    font-size: 45px;
+  }
+}
+
+/** form style **/
+
+form {
+  max-width: 700px;
+}
+
+form label {
   display: block;
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+label.inline-label {
+  display: inline-block;
+}
+
+fieldset {
+  border: 1px solid lightgray;
+  background-color: rgba(225, 233, 255, 0.25);
+}
+
+.form-input[type="text"], form select, form textarea {
+  display: inline-block;
+  margin-bottom: 10px;
+  padding: 10px;
+  width: 80%;
+}
+
+button[type=submit] {
+  color: #efefef;
+  background-color: var(--secondary-bg-color);
+  padding: 10px;
+  margin-top: 15px;
 }
