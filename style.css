@@ -22,6 +22,18 @@ body{
   overflow-x: hidden;
 }
 
+.main-font {
+  font-family: var(--main-font);
+}
+
+.photos {
+  position: relative;
+}
+
+.date {
+  text-align: end;
+}
+
 a,
 a:hover,
 a:visited {
@@ -52,8 +64,10 @@ h6{
   font-family: var(--subtitle-font);
 }
 
-.formule{
-  height:300px;
+.formule,
+.price,
+.aside{
+  height:450px;
 }
 
 .position{
@@ -64,11 +78,11 @@ h6{
 
 .price{
   background-color: var(--tarif-color);
-  height: 300px;
   color:var(--white-color-font);
   font-family: var(--main-font);
   font-size: 20px;
 }
+
 .m-0{
   margin: 0px;
 }
@@ -107,11 +121,23 @@ nav{
 /** Main style **/
 main{
   display: block;
-  height: 1105px;
+  min-height: 70vh;
 }
 
 .description{
-  font-size:1em;
+  font-family: var(--title-font);
+  font-size:0.85em;
+  margin-left: 0px;
+  padding-left: 0px;
+}
+
+.description >h6{
+  text-decoration: underline;
+}
+
+.photos{
+  position:relative;
+  max-width: 100%;
 }
 
 .aside{
@@ -135,7 +161,8 @@ footer{
 }
 
 /** Media queries **/
-@media screen and (min-width: 768px){
+
+@media screen and (min-width: 840px){
   header> .title > h1, 
   header > .title > p ,
   h3,
@@ -145,10 +172,28 @@ footer{
   }
   h6 ,
   main > .description{
-    font-size:1.5em;
+    font-size:1.2em;
   }
   .aside{
     font-size: 45px;
+  }
+
+  .price,
+  .formule,
+  .aside{
+    height: 600px;
+  }
+  
+  .price > p{
+    font-size: 1.3em;
+  }
+
+  main{
+    display: block;
+    min-height: 67.5vh;
+  }
+  .description{
+    font-size: 0.95em;
   }
 }
 
