@@ -64,12 +64,6 @@ h6{
   font-family: var(--subtitle-font);
 }
 
-.formule,
-.price,
-.aside{
-  height:450px;
-}
-
 .position{
   justify-content: center;
   text-align:center;
@@ -160,7 +154,22 @@ footer{
   padding-top: 10px;
 }
 
+.price,
+.formule,
+.aside{
+  height: 850px;
+}
+
 /** Media queries **/
+
+
+@media screen and (min-width:472px){
+  .price,
+  .formule,
+  .aside{
+    height: 600px;
+  }
+}
 
 @media screen and (min-width: 840px){
   header> .title > h1, 
